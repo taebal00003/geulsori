@@ -18,6 +18,14 @@ python -m uvicorn server.main:app --port 8000
 - PC 크롬에서 `http://localhost:8000` 접속 (localhost는 마이크 허용됨)
 - 휴대폰 테스트: `ngrok http 8000`으로 만든 HTTPS 주소로 접속 (휴대폰 브라우저는 HTTPS에서만 마이크 허용)
 
+## Render 배포
+1. [render.com](https://render.com)에 GitHub 계정으로 가입
+2. **New → Blueprint** → 이 저장소 선택 (`render.yaml` 설정이 자동 적용)
+3. `ANTHROPIC_API_KEY` 값 입력 후 **Apply**
+4. 배포가 끝나면 `https://geulsori.onrender.com` 같은 HTTPS 주소로 접속
+
+무료 플랜은 15분 정도 접속이 없으면 잠들어 첫 접속에 30초~1분이 걸린다.
+
 ## WebSocket 메시지
 | 보냄 | 받음 |
 |---|---|
